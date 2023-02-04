@@ -17,7 +17,7 @@
 Clone the repository to your local development environment and the then run `npm install` on your terminal. Thereafter, execute `node server.js` and then open the `http://localhost:3000` in your prefered browser.
 
 ## Usage
-Here is the heroku link for the project
+Here is the heroku link for the project https://super-notes.herokuapp.com/
 
 ![Demo](demo)
 
