@@ -31,7 +31,7 @@ router.post("/", (req, res) => {
       text,
     };
 
-    readAndAppend(addNewNote, "../db/db.json");
+    readAndAppend(addNewNote, "db/db.json");
 
     const response = {
       status: "success",
