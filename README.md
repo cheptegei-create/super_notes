@@ -19,7 +19,7 @@ Clone the repository to your local development environment and the then run `npm
 ## Usage
 Here is the heroku link for the project https://super-notes.herokuapp.com/
 
-![Demo](demo.webm)
+![Demo](demo.gif)
 
 ## Credits
 
