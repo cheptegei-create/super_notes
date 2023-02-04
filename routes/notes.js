@@ -4,13 +4,14 @@ const {
   readAndAppend,
   writeToFile,
 } = require("../helpers/fsUtils");
+const uuid = require("../helpers/uuid");
 const router = require("express").Router();
 
 // Retrieving all notes
 router.get("/", (req, res) => {
   console.info(`${req.method} request received for notes`);
 
-  readFromFile(path.join(__dirname, "../db/db.json")).then((data) =>
+  readFromFile("db/db.json").then((data) =>
     res.json(JSON.parse(data))
   );
 });
@@ -28,6 +29,7 @@ router.post("/", (req, res) => {
     // Variable for the object we will save
     const addNewNote = {
       title,
+      id: uuid(),
       text,
     };
 
@@ -48,11 +50,11 @@ router.post("/", (req, res) => {
 router.get("/:id", function (req, res) {
   // display json for the notes array indices of the provided id
   const noteId = req.params.id;
-  readFromFile(path.join(__dirname, "../db/db.json"))
+  readFromFile(path.join("db/db.json"))
     .then((data) => JSON.parse(data))
     .then((json) => {
       const result = json.filter((point) => point.id == noteId);
-      writeToFile(path.join(__dirname, "../db/db.json"), result);
+      writeToFile("db/db.json", result);
       res.json("added note with id " + req.params.id);
     });
 });
@@ -65,7 +67,7 @@ router.delete("/:id", function (req, res) {
     .then((data) => JSON.parse(data))
     .then((notes) => {
       const newArray = notes.filter((note) => note.id != deletedId);
-      writeToFile(path.join(__dirname, "../db/db.json"), newArray);
+      writeToFile("db/db.json", newArray);
       res.json("Deleted note with id " + req.params.id);
     });
 });

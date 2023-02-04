@@ -2,8 +2,6 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
  For future references, it is always better to take down notes of important ideas, events, and plans. This project enables a user to take down notes and save it on a server. Express.js makes it easy to add, view, and delete notes in a server.
 
 ## Table of Contents (Optional)
@@ -19,8 +17,9 @@ Provide a short description explaining the what, why, and how of your project. U
 Clone the repository to your local development environment and the then run `npm install` on your terminal. Thereafter, execute `node server.js` and then open the `http://localhost:3000` in your prefered browser.
 
 ## Usage
+Here is the heroku link for the project
 
-![Demo](assets/images/screenshot.png)
+![Demo](demo)
 
 ## Credits
 
